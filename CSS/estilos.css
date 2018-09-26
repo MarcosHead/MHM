@@ -2,17 +2,19 @@ header{
 	background-color: blue;
 }
 
+header{
+	background-color: blue;
+}
+
 footer{
 	background-color: blue;
-	size: 100%;
 }
 
 .corpo{
-	background-color: lightblue;
 }
 
-.tab {
-	padding: 20px;
+.aba {
+	padding: 2%;
 	display: none;
 	border: 0.5px solid lightgray;
 }
