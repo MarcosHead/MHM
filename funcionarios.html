@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>MHM Imóveis</title>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" type="text/css" href="CSS/estilos.css">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	    <script src="JS/script.js"></script>
+	</head>
+
+	<body class="corpo">
+		<header>MHM Imóveis</header>
+		<nav class="navbar navbar-inverse menu">
+
+			<ul class="nav navbar-nav">
+				<li class="active"><a class="navLink" href="#" onclick="mostraAba('cadFuncionarios', this);">Cadastro de Funcionários</a></li>
+				<li><a class="navLink" href="#" onclick="mostraAba('cadClientes', this);">Cadastro de Clientes</a></li>
+				<li><a class="navLink" href="#" onclick="mostraAba('cadImoveis', this);">Cadastro de Imóveis</a></li>
+				<li><a class="navLink" href="#" onclick="mostraAba('listFuncionarios', this);">Listagem de Funcionários</a></li>
+				<li><a class="navLink" href="#" onclick="mostraAba('listClientes', this);">Listagem de Clientes</a></li>
+				<li><a class="navLink" href="#" onclick="mostraAba('listImoveis', this);">Listagem de Imóveis</a></li>
+				<li><a class="navLink" href="#" onclick="mostraAba('listInteressados', this);">Listagem de Interessados</a></li>
+			</ul>
+			<ul class="login">
+			<!-- Modal -->
+			<button style="color: white" class="btn btn-danger"  data-toggle="modal" data-target="#modalLogin">SAIR</button>
+		</nav>
+
+		<div class="aba container" id="cadFuncionarios">
+			<table>
+				<tr>
+					<td>
+						
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="aba container" id="Busca">
+			<h3>FILTROS DE PESQUISA</h3>
+			
+
+			<br>
+			<h3>RESULTADOS DA PESQUISA:</h3>
+		</div>
+
+		<footer>rodape</footer>	
+	</body>
+</html>
