@@ -11,9 +11,6 @@ footer{
 	text-align: center!important;
 }
 
-.corpo{
-}
-
 .menu{
 	vertical-align: middle;
 }
@@ -30,8 +27,16 @@ footer{
 	margin-right: 5px;
 }
 
+.logo{
+	float: left;
+	height: 150px;
+	width: 150px;
+}
+
 .fotos{
 	margin: 0 2%;
+	width: 200px;
+	height: 200px;
 }
 
 .descricao{
