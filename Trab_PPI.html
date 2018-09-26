@@ -1,103 +1,125 @@
 <!DOCTYPE html>
 <html lang="pt-br">
- 	<head>
-		<title>MHM Imóveis</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="CSS/estilos.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<head>
+ 		<title>MHM Imóveis</title>
+ 		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" type="text/css" href="CSS/estilos.css">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 
- 	<header>
-		 		
- 		<p style="background-color:black; color:green">
-			Este parágrafo aparecerá com o fundo preto, <br><br>
-			mas com o texto na cor verde.
-		</p>
+	<script type="text/javascript">
+		$(function () {
+		  $("#Home").fadeIn(200);
+		});
 
+		function mostraAba(idPagina, link)
+		{
+		  $(".aba").hide();      
+		  $("ul.navbar-nav, li").removeClass("active");          
 
- 	</header>
+		  $("#" + idPagina).fadeIn(500);     
+		  if (link != null)
+		    link.parentNode.className += " active";
+		}
+	</script>
 
- 	<div style="padding: 1%" class="row descricao">
- 	<div class="col-sm-4">
- 		<h5 style="text-align: center;">Apartamento</h5>
- 		<p> Informações essenciais do Imóvel, como preço, número de quartos e área construída, apresenadas de maneira legível e elegante </p>
+	<body class="corpo container">
+		<header>MHM Imóveis</header>
+		<nav class="navbar navbar-inverse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a class="navLink" href="#" onclick="mostraAba('Home', this);">Home</a></li>
+				<li><a class="navLink" href="#" onclick="mostraAba('Busca', this);">Busca por Imóveis</a></li>
+				<button class="btn btn-success"  data-toggle="modal" data-target="#modalExemplo">Log_in</button>
+				
 
- 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modalExemplo-xl">Detalhes
-		</button>
+			</ul>
+		</nav>
 
-		<!-- Modal -->
-		<div class="modal fade modalExemplo-xl" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  			<div class="modal-dialog modal-xl" role="document">
-    			<div class="modal-content">
-      				<div class="modal-header">
-       					<h5 class="modal-title" id="exampleModalLabel">Detalhes do Imóvel</h5>
-        				<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-          					<span aria-hidden="true">&times;</span>
-        				</button>
-     				</div>
-      			<div class="modal-body">
-       			 aaaaaaaaaa aaaaaaaaaaa aaaaaaaa aaaaaaaaa aaaaaaaa aaaaaaa aaaaaaaaa aaaaaaaa aaaaaaaa aaaaaaaa aaaaaaaaa aaaaaaaa aaaaaaaa aaaaaaaaa aaaaaaa aaaaaaa
-      			</div>
-     	 		<div class="modal-footer">
-        			<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        			
-     			</div>
-   				</div>
-  			</div>
+		<div class="aba" id="Home">
+			<img class="fotos" style="float: left;" src="logo.jpg" height="100px" width="100px">
+			<h3 style="margin: 4%;">MHM IMOBILIARIA</h3>
+			<p>Conteúdo da página home...</p>
 		</div>
 
+		<div class="aba" id="Busca">
+			<h3>Busca por Imóveis</h3>
+			<p>FILTOS DE PESQUISA</p>
 
-	</div>
-	
-	<div class="col-sm-8">
- 		<p align="center">  <img class="fotos" src="imagens/apart.jpg" width="300" height="200"> <img class="fotos" src="imagens/apart2.jpg" width="300px" height="200px"> <img class="fotos" src="imagens/apart3.jpg" width="300" height="200"> </p>
-	</div>
+			<div style="padding: 1%" class="row descricao">
+			 	<div class="col-sm-4">
+			 		<h5 style="text-align: center;">Apartamento</h5>
+			 		<p> Informações essenciais do Imóvel, como preço, número de quartos e área construída, apresenadas de maneira legível e elegante </p>
 
-	</div>
+			 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modalExemplo-xl">Detalhes
+					</button>
+
+					<!-- Modal -->
+					<div class="modal fade modalExemplo-xl" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  			<div class="modal-dialog modal-xl" role="document">
+			    			<div class="modal-content">
+			      				<div class="modal-header">
+			       					<h5 class="modal-title" id="exampleModalLabel">Detalhes do Imóvel</h5>
+			        				<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+			          					<span aria-hidden="true">&times;</span>
+			        				</button>
+			     				</div>
+				      			<div class="modal-body">
+				       			 aaaaaaaaaa aaaaaaaaaaa aaaaaaaa aaaaaaaaa aaaaaaaa aaaaaaa aaaaaaaaa aaaaaaaa aaaaaaaa aaaaaaaa aaaaaaaaa aaaaaaaa aaaaaaaa aaaaaaaaa aaaaaaa aaaaaaa
+				      			</div>
+				     	 		<div class="modal-footer">
+				        			<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>	
+				     			</div>
+			   				</div>
+			  			</div>
+					</div>
+				</div>
+		
+				<div class="col-sm-8">
+			 		<p align="center">  <img class="fotos" src="imagens/apart.jpg" width="300" height="200"> <img class="fotos" src="imagens/apart2.jpg" width="300px" height="200px"> <img class="fotos" src="imagens/apart3.jpg" width="300" height="200"> </p>
+				</div>
+			</div>
 
 	<div style="padding: 1%" class="row descricao">
- 	<div class="col-sm-4">
- 		<h5 style="text-align: center;">Casa</h5>
- 		<p> Informações essenciais do Imóvel, como preço, número de quartos e área construída, apresenadas de maneira legível e elegante </p>
+	 	<div class="col-sm-4">
+	 		<h5 style="text-align: center;">Casa</h5>
+	 		<p> Informações essenciais do Imóvel, como preço, número de quartos e área construída, apresenadas de maneira legível e elegante </p>
 
 
- 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">Detalhes
-		</button>
+	 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">Detalhes
+			</button>
 
-		<!-- Modal -->
-		<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  			<div class="modal-dialog" role="document">
-    			<div class="modal-content">
-      				<div class="modal-header">
-       					<h5 class="modal-title" id="exampleModalLabel">Detalhes do Imóvel</h5>
-        				<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-          					<span aria-hidden="true">&times;</span>
-        				</button>
-     				</div>
-      			<div class="modal-body">
-       			 ...
-      			</div>
-     	 		<div class="modal-footer">
-        			<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        			
-     			</div>
-   				</div>
-  			</div>
+			<!-- Modal -->
+			<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  			<div class="modal-dialog" role="document">
+	    			<div class="modal-content">
+	      				<div class="modal-header">
+	       					<h5 class="modal-title" id="exampleModalLabel">Detalhes do Imóvel</h5>
+	        				<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+	          					<span aria-hidden="true">&times;</span>
+	        				</button>
+	     				</div>
+	      			<div class="modal-body">
+	       			 ...
+	      			</div>
+	     	 		<div class="modal-footer">
+	        			<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+	        			
+	     			</div>
+	   				</div>
+	  			</div>
+			</div>
 		</div>
-
-
-
-
-	</div>
-
-	
-	<div class="col-sm-8">
- 		<p align="center">  <img class="fotos" src="imagens/casa.jpg" width="300" height="200"> <img class="fotos" src="imagens/casa2.jpg" width="300" height="200"> <img class="fotos" src="imagens/casa3.jpg" width="300" height="200"></p>
-	</div>
+		<div class="col-sm-8">
+	 		<p align="center">
+	 			<img class="fotos" src="imagens/casa.jpg" width="300" height="200">
+	 			<img class="fotos" src="imagens/casa2.jpg" width="300" height="200">
+	 			<img class="fotos" src="imagens/casa3.jpg" width="300" height="200">
+	 		</p>
+		</div>
 
 	</div>
 
@@ -181,5 +203,8 @@
 
 	</div>
 
+		</div>
 
- </html>
+		<footer>rodape</footer>	
+	</body>
+</html>
