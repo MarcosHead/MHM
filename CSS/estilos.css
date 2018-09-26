@@ -52,3 +52,19 @@ footer{
 	margin: 2% 0;
 	border: 2px solid black;
 }
+
+.modal-laranja{
+
+	background: rgb(219,107,68); height: 55px!important;
+
+}
+
+.botao-laranja{
+
+	background: rgb(219,107,68)!important;
+}
+
+.botao-azul{
+
+	background: rgb(0,78,120)!important;
+}
