@@ -11,6 +11,11 @@ footer{
 	text-align: center!important;
 }
 
+.corpo{
+	margin:0;
+	width: 70% auto;
+}
+
 .menu{
 	vertical-align: middle;
 }
@@ -19,6 +24,7 @@ footer{
 	padding: 2%;
 	display: none;
 	border: 0.5px solid lightgray;
+	margin: 0 0 2%;
 }
 
 .login{
@@ -34,7 +40,7 @@ footer{
 }
 
 .fotos{
-	margin: 0 2%;
+	margin: 1% 2%;
 	width: 200px;
 	height: 200px;
 }
