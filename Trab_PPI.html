@@ -118,7 +118,163 @@
 
 
 	 		
-	 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCasa-lg">Detalhes
+	 		<button type="button" class="btn btn-primary botao-azul" data-toggle="modal" data-target="#modalApart-lg">Detalhes
+			 		</button>
+
+					<!-- Modal -->
+					<div class="modal fade" id="modalApart-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  			<div class="modal-dialog modal-lg" role="document">>
+			    			<div class="modal-content">
+			      				<div class="modal-header centralizar">
+			       					<h4 class="modal-title" id="exampleModalLabel">Detalhes do Imóvel</h4>
+			        				<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+			          					<span aria-hidden="true">&times;</span>
+			        				</button>
+			     				</div>
+				      			<div class="modal-body">
+				       			 
+				       			 <p> Toda a descrição do imóvel</p>
+
+       			 					<p align="center">  
+       			 						<img class="fotosmodal" src="imagens/apart4.jpg"> 
+       			 						<img class="fotosmodal" src="imagens/apart5.jpg"> 
+       			 						<img class="fotosmodal" src="imagens/apart6.jpg"> 
+       			 						<img class="fotosmodal" src="imagens/apart7.jpg"> 
+       			 					</p>
+
+				      			</div>
+				      			<ul class="navbar-button">
+				     	 		<div class="modal-footer">
+				        			<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>	
+				     			</div>
+				     			</ul>
+			   				</div>
+			  			</div>
+					</div>
+
+
+					<button type="button" class="btn btn-primary botao-laranja" data-toggle="modal" data-target="#modalInteresse">Tenho interesse
+					</button>
+
+
+					<div class="modal fade" id="modalInteresse" tabindex="-1" role="dialog" aria-labelledby="exampleModalInteresse" aria-hidden="true">
+			  			<div class="modal-dialog" role="document">>
+			    			<div class="modal-content">
+			      				<div class="modal-header centralizar modal-laranja">
+			       					
+			        				<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+			          					<span  aria-hidden="true">&times;</span>
+			        				</button>
+			        				<h4 class="modal-title" id="exampleModalInteresse">Fale Conosco</h4>
+
+			     				</div>
+				      			<div class="modal-body">
+
+				      				
+    									<div class="row">
+      										<div class="col-md-12"> 
+
+
+      											<form>
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">Nome:</label>
+            										<input type="text" class="form-control" id="recipient-name">
+          											</div>
+          										</form>
+
+      										</div>
+      										
+    									</div>
+
+    									<div class="row">
+      										<div class="col-md-6"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">E-mail:</label>
+            										<input type="text" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+
+      										
+
+      										<div class="col-md-2"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">DDD:</label>
+            										<input type="text" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+
+      										
+      										<div class="col-md-4"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">Telefone:</label>
+            										<input type="text" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+      										
+      										
+      									
+    									</div>
+
+
+    								
+
+				      				<form>
+          								
+          								<div class="form-group">
+            								<label for="message-text" class="col-form-label">Descrição da proposta:</label>
+            								<textarea class="form-control" id="message-text"></textarea>
+          								</div>
+        							</form>
+
+				      			</div>
+
+				      			<div class="modal-footer">
+        							<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        							<button type="button" class="btn btn-primary botao-laranja">Enviar</button>
+      							</div>
+			   				</div>
+			  			</div>
+					</div>
+
+
+
+
+
+
+				</div>
+
+		
+				<div class="col-sm-8">
+			 		<p align="center">  
+			 			<img class="fotos" src="imagens/apart.jpg">
+			 			<img class="fotos" src="imagens/apart2.jpg">
+			 			<img class="fotos" src="imagens/apart3.jpg"> 
+			 		</p>
+				</div>
+			</div>
+
+	<div style="padding: 1%" class="row descricao">
+	 	<div class="col-sm-4">
+	 		<h4 class="centralizar" >Casa</h4>
+	 		<p> Informações essenciais do Imóvel, como preço, número de quartos e área construída, apresenadas de maneira legível e elegante </p>
+
+
+	 		<button type="button" class="btn btn-primary botao-azul" data-toggle="modal" data-target="#modalCasa-lg">Detalhes
 			</button>
 
 			<!-- Modal -->
@@ -126,7 +282,7 @@
 	  			<div class="modal-dialog modal-lg" role="document">
 	    			<div class="modal-content">
 	      				<div class="modal-header centralizar">
-	       					<h5 class="modal-title" id="exampleModalLabel">Detalhes do Imóvel</h5>
+	       					<h4 class="modal-title" id="exampleModalLabel">Detalhes do Imóvel</h4>
 	        				<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
 	          					<span aria-hidden="true">&times;</span>
 	        				</button>
@@ -149,6 +305,106 @@
 	   				</div>
 	  			</div>
 			</div>
+
+			<button type="button" class="btn btn-primary botao-laranja" data-toggle="modal" data-target="#modalInteresse">Tenho interesse
+					</button>
+
+
+					<div class="modal fade" id="modalInteresse" tabindex="-1" role="dialog" aria-labelledby="exampleModalInteresse" aria-hidden="true">
+			  			<div class="modal-dialog" role="document">>
+			    			<div class="modal-content">
+			      				<div class="modal-header centralizar modal-laranja">
+			       					
+			        				<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+			          					<span  aria-hidden="true">&times;</span>
+			        				</button>
+			        				<h4 class="modal-title" id="exampleModalInteresse">Fale Conosco</h4>
+
+			     				</div>
+				      			<div class="modal-body">
+
+				      				
+    									<div class="row">
+      										<div class="col-md-12"> 
+
+
+      											<form>
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">Nome:</label>
+            										<input type="text" class="form-control" id="recipient-name">
+          											</div>
+          										</form>
+
+      										</div>
+      										
+    									</div>
+
+    									<div class="row">
+      										<div class="col-md-6"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">E-mail:</label>
+            										<input type="text" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+
+      										
+
+      										<div class="col-md-2"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">DDD:</label>
+            										<input type="text" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+
+      										
+      										<div class="col-md-4"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">Telefone:</label>
+            										<input type="text" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+      										
+      										
+      									
+    									</div>
+
+
+    								
+
+				      				<form>
+          								
+          								<div class="form-group">
+            								<label for="message-text" class="col-form-label">Descrição da proposta:</label>
+            								<textarea class="form-control" id="message-text"></textarea>
+          								</div>
+        							</form>
+
+				      			</div>
+
+				      			<div class="modal-footer">
+        							<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        							<button type="button" class="btn btn-primary botao-laranja">Enviar</button>
+      							</div>
+			   				</div>
+			  			</div>
+					</div>
+
+
 		</div>
 		<div class="col-sm-8">
 	 		<p align="center">
@@ -158,6 +414,10 @@
 	 		</p>
 		</div>
 
+
+
+
+
 	</div>
 
 	<div style="padding: 1%" class="row descricao">
@@ -165,7 +425,7 @@
  		<h4 class="centralizar">Sala Comercial</h4>
  		<p> Informações essenciais do Imóvel, como preço, número de quartos e área construída, apresenadas de maneira legível e elegante </p>
 
- 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSala-lg">Detalhes
+ 		<button type="button" class="btn btn-primary botao-azul" data-toggle="modal" data-target="#modalSala-lg">Detalhes
 		</button>
 
 		<!-- Modal -->
@@ -173,7 +433,7 @@
   			<div class="modal-dialog modal-lg" role="document">
     			<div class="modal-content">
       				<div class="modal-header centralizar">
-       					<h5 class="modal-title" id="exampleModalLabel">Detalhes do Imóvel</h5>
+       					<h4 class="modal-title" id="exampleModalLabel">Detalhes do Imóvel</h4>
         				<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           					<span aria-hidden="true">&times;</span>
         				</button>
@@ -197,6 +457,104 @@
   			</div>
 		</div>
 
+		<button type="button" class="btn btn-primary botao-laranja" data-toggle="modal" data-target="#modalInteresse">Tenho interesse
+					</button>
+
+
+					<div class="modal fade" id="modalInteresse" tabindex="-1" role="dialog" aria-labelledby="exampleModalInteresse" aria-hidden="true">
+			  			<div class="modal-dialog" role="document">>
+			    			<div class="modal-content">
+			      				<div class="modal-header centralizar modal-laranja">
+			       					
+			        				<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+			          					<span  aria-hidden="true">&times;</span>
+			        				</button>
+			        				<h4 class="modal-title" id="exampleModalInteresse">Fale Conosco</h4>
+
+			     				</div>
+				      			<div class="modal-body">
+
+				      				
+    									<div class="row">
+      										<div class="col-md-12"> 
+
+
+      											<form>
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">Nome:</label>
+            										<input type="text" class="form-control" id="recipient-name">
+          											</div>
+          										</form>
+
+      										</div>
+      										
+    									</div>
+
+    									<div class="row">
+      										<div class="col-md-6"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">E-mail:</label>
+            										<input type="text" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+
+      										
+
+      										<div class="col-md-2"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">DDD:</label>
+            										<input type="text" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+
+      										
+      										<div class="col-md-4"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">Telefone:</label>
+            										<input type="text" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+      										
+      										
+      									
+    									</div>
+
+
+    								
+
+				      				<form>
+          								
+          								<div class="form-group">
+            								<label for="message-text" class="col-form-label">Descrição da proposta:</label>
+            								<textarea class="form-control" id="message-text"></textarea>
+          								</div>
+        							</form>
+
+				      			</div>
+
+				      			<div class="modal-footer">
+        							<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        							<button " type="button" class="btn btn-primary botao-laranja">Enviar</button>
+      							</div>
+			   				</div>
+			  			</div>
+					</div>
+
 
 
 	</div>
@@ -216,7 +574,7 @@
  		<h4 class="centralizar">Terreno</h4>
  		<p> Informações essenciais do Imóvel, como preço, número de quartos e área construída, apresenadas de maneira legível e elegante </p>
 
- 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalTerreno-lg">Detalhes
+ 		<button type="button" class="btn btn-primary botao-azul" data-toggle="modal" data-target="#modalTerreno-lg">Detalhes
 		</button>
 
 		<!-- Modal -->
@@ -224,7 +582,7 @@
   			<div class="modal-dialog modal-lg" role="document">
     			<div class="modal-content">
       				<div class="modal-header centralizar">
-       					<h5 class="modal-title" id="exampleModalLabel">Detalhes do Imóvel</h5>
+       					<h4 class="modal-title" id="exampleModalLabel">Detalhes do Imóvel</h4>
         				<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           					<span aria-hidden="true">&times;</span>
         				</button>
@@ -245,6 +603,105 @@
    				</div>
   			</div>
 		</div>
+
+		<button type="button" class="btn btn-primary botao-laranja" data-toggle="modal" data-target="#modalInteresse">Tenho interesse
+					</button>
+
+
+					<div class="modal fade" id="modalInteresse" tabindex="-1" role="dialog" aria-labelledby="exampleModalInteresse" aria-hidden="true">
+			  			<div class="modal-dialog" role="document">>
+			    			<div class="modal-content">
+			      				<div  class="modal-header centralizar modal-laranja">
+			       					
+			        				<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+			          					<span  aria-hidden="true">&times;</span>
+			        				</button>
+			        				<h4 class="modal-title" id="exampleModalInteresse">Fale Conosco</h4>
+
+			     				</div>
+				      			<div class="modal-body">
+
+				      				
+    									<div class="row">
+      										<div class="col-md-12"> 
+
+
+      											<form>
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">Nome:</label>
+            										<input type="text" class="form-control" id="recipient-name">
+          											</div>
+          										</form>
+
+      										</div>
+      										
+    									</div>
+
+    									<div class="row">
+      										<div class="col-md-6"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">E-mail:</label>
+            										<input type="text" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+
+      										
+
+      										<div class="col-md-2"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">DDD:</label>
+            										<input type="text" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+
+      										
+      										<div class="col-md-4"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">Telefone:</label>
+            										<input type="text" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+      										
+      										
+      									
+    									</div>
+
+
+    								
+
+				      				<form>
+          								
+          								<div class="form-group">
+            								<label for="message-text" class="col-form-label">Descrição da proposta:</label>
+            								<textarea class="form-control" id="message-text"></textarea>
+          								</div>
+        							</form>
+
+				      			</div>
+
+				      			<div class="modal-footer">
+        							<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        							<button type="button" class="btn btn-primary botao-laranja">Enviar</button>
+      							</div>
+			   				</div>
+			  			</div>
+					</div>
+
 
 	</div>
 	
