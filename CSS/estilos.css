@@ -1,8 +1,18 @@
-.fotos{
-	margin: 0 2%;
+header{
+	background-color: blue;
 }
 
-.descricao{
-	margin: 2% 0;
-	border: 2px solid black;
+footer{
+	background-color: blue;
+	size: 100%;
+}
+
+.corpo{
+	background-color: lightblue;
+}
+
+.tab {
+	padding: 20px;
+	display: none;
+	border: 0.5px solid lightgray;
 }
