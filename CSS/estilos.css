@@ -3,11 +3,12 @@ h4{
 }
 
 header{
-	background-color: blue;
+	padding-left: 5%;
 }
 
 footer{
-	background-color: blue;
+	background-color: rgb(219,107,68)!important;
+	padding: 1% 5%;
 }
 
 .centralizar{
@@ -21,6 +22,7 @@ footer{
 
 .menu{
 	vertical-align: middle;
+	margin-top: 100px; 
 }
 
 .aba {
@@ -40,6 +42,11 @@ footer{
 	float: left;
 	height: 150px;
 	width: 150px;
+}
+
+.logofixa{
+	float: left;
+
 }
 
 .fotos{
