@@ -29,26 +29,53 @@
 
 	<body class="corpo container">
 		<header>MHM Imóveis</header>
-		<nav class="navbar navbar-inverse">
+		<nav class="navbar navbar-inverse menu">
+
 			<ul class="nav navbar-nav">
 				<li class="active"><a class="navLink" href="#" onclick="mostraAba('Home', this);">Home</a></li>
 				<li><a class="navLink" href="#" onclick="mostraAba('Busca', this);">Busca por Imóveis</a></li>
-				<button class="btn btn-success"  data-toggle="modal" data-target="#modalExemplo">Log_in</button>
-				
-
 			</ul>
+			<ul class="login">
+			<!-- Modal -->
+			<button class="btn btn-success"  data-toggle="modal" data-target="#modalLogin">Login</button>	
+			<div class="modal fade" id="modalLogin" role="dialog">
+	  			<div class="modal-dialog modal-xl" role="document">
+	    			<div class="modal-content">
+	      				<div class="modal-header">
+	       					<h3 class="modal-title centralizar"><b>LOGIN<b></h3>
+	        				<button type="button" class="close btn-danger" data-dismiss="modal" aria-label="Fechar">
+	          					<span aria-hidden="true">&times;</span>
+	        				</button>
+	     				</div>
+		      			<div class="modal-body form-group  centralizar">
+		      				<label for="user">Usuário: </label>
+		      				<input class="form-control" type="text" name="user">
+		      				<br>
+		      				<label for="senha">Senha: </label>
+							<input class="form-control" type="password" name="senha">		      				
+		      			</div>
+		     	 		<div class="modal-footer centralizar">
+		     	 			<input type="submit" class="btn btn-success" value="Entrar">
+		        			<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+		     			</div>
+	   				</div>
+	  			</div>
+			</div>
+			</ul>
+
 		</nav>
 
 		<div class="aba" id="Home">
 			<img class="fotos" style="float: left;" src="logo.jpg" height="100px" width="100px">
-			<h3 style="margin: 4%;">MHM IMOBILIARIA</h3>
+			<h3 style="margin: 4%;">MHM IMÓVEIS</h3>
 			<p>Conteúdo da página home...</p>
 		</div>
 
 		<div class="aba" id="Busca">
-			<h3>Busca por Imóveis</h3>
-			<p>FILTOS DE PESQUISA</p>
+			<h3>FILTOS DE PESQUISA</h3>
 
+			<br>
+			<h3>RESULTADOS DA PESQUISA:</h3>
 			<div style="padding: 1%" class="row descricao">
 			 	<div class="col-sm-4">
 			 		<h5 style="text-align: center;">Apartamento</h5>
