@@ -11,3 +11,7 @@ function mostraAba(idPagina, link)
 	if (link != null)
 	link.parentNode.className += " active";
 }
+
+function mudarPagina(){
+	window.open("funcionarios.html", '_blank');
+}
