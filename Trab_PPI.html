@@ -1,31 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
- 		<title>MHM Imóveis</title>
- 		<meta charset="UTF-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <link rel="stylesheet" type="text/css" href="CSS/estilos.css">
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<title>MHM Imóveis</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="CSS/estilos.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="JS/script.js"></script>
 	</head>
-
-	<script type="text/javascript">
-		$(function () {
-		  $("#Home").fadeIn(200);
-		});
-
-		function mostraAba(idPagina, link)
-		{
-		  $(".aba").hide();      
-		  $("ul.navbar-nav, li").removeClass("active");          
-
-		  $("#" + idPagina).fadeIn(500);     
-		  if (link != null)
-		    link.parentNode.className += " active";
-		}
-	</script>
 
 	<body class="corpo container">
 		<header>MHM Imóveis</header>
@@ -42,7 +27,7 @@
 	  			<div class="modal-dialog modal-xl" role="document">
 	    			<div class="modal-content">
 	      				<div class="modal-header">
-	       					<h3 class="modal-title centralizar"><b>LOGIN<b></h3>
+	       					<h4 class="modal-title centralizar">LOGIN</h4>
 	        				<button type="button" class="close btn-danger" data-dismiss="modal" aria-label="Fechar">
 	          					<span aria-hidden="true">&times;</span>
 	        				</button>
