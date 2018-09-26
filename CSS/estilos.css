@@ -1,6 +1,3 @@
-header{
-	background-color: blue;
-}
 
 header{
 	background-color: blue;
@@ -10,13 +7,27 @@ footer{
 	background-color: blue;
 }
 
+.centralizar{
+	text-align: center!important;
+}
+
 .corpo{
+}
+
+.menu{
+	vertical-align: middle;
 }
 
 .aba {
 	padding: 2%;
 	display: none;
 	border: 0.5px solid lightgray;
+}
+
+.login{
+	float: right!important; 
+	margin-top: 7px;
+	margin-right: 5px;
 }
 
 .fotos{
