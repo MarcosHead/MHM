@@ -2,6 +2,10 @@ $(function () {
 	$("#Home").fadeIn(200);
 });
 
+$(function () {
+	$("#cadFuncionarios").fadeIn(200);
+});
+
 function mostraAba(idPagina, link)
 {
 	$(".aba").hide();      
