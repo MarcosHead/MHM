@@ -1,33 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
- 		<title>MHM Imóveis</title>
- 		<meta charset="UTF-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <link rel="stylesheet" type="text/css" href="CSS/estilos.css">
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<title>MHM Imóveis</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="CSS/estilos.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="JS/script.js"></script>
 	</head>
 
-	<script type="text/javascript">
-		$(function () {
-		  $("#Home").fadeIn(200);
-		});
-
-		function mostraAba(idPagina, link)
-		{
-		  $(".aba").hide();      
-		  $("ul.navbar-nav, li").removeClass("active");          
-
-		  $("#" + idPagina).fadeIn(500);     
-		  if (link != null)
-		    link.parentNode.className += " active";
-		}
-	</script>
-
-	<body class="corpo container">
+	<body class="corpo">
 		<header>MHM Imóveis</header>
 		<nav class="navbar navbar-inverse menu">
 
@@ -42,7 +27,7 @@
 	  			<div class="modal-dialog modal-xl" role="document">
 	    			<div class="modal-content">
 	      				<div class="modal-header">
-	       					<h3 class="modal-title centralizar"><b>LOGIN<b></h3>
+	       					<h4 class="modal-title centralizar">LOGIN</h4>
 	        				<button type="button" class="close btn-danger" data-dismiss="modal" aria-label="Fechar">
 	          					<span aria-hidden="true">&times;</span>
 	        				</button>
@@ -65,28 +50,28 @@
 
 		</nav>
 
-		<div class="aba" id="Home">
+		<div class="aba  container" id="Home">
 			<img class="logo" src="logo.jpg">
 			<h3 style="margin: 4%;">MHM IMÓVEIS</h3>
 			<p>Conteúdo da página home...</p>
 		</div>
 
-		<div class="aba" id="Busca">
+		<div class="aba  container" id="Busca">
 			<h3>FILTOS DE PESQUISA</h3>
 
 			<br>
 			<h3>RESULTADOS DA PESQUISA:</h3>
 			<div style="padding: 1%" class="row descricao">
 			 	<div class="col-sm-4">
-			 		<h5 style="text-align: center;">Apartamento</h5>
-			 		<p> Informações essenciais do Imóvel, como preço, número de quartos e área construída, apresenadas de maneira legível e elegante </p>
+			 		<h4 class="centralizar" >Apartamento</h4>
+			 		<p>  Informações essenciais do Imóvel, como preço, número de quartos e área construída, apresenadas de maneira legível e elegante </p>
 
-			 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modalExemplo-xl">Detalhes
+			 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalApart-lg">Detalhes
 					</button>
 
 					<!-- Modal -->
-					<div class="modal fade modalExemplo-xl" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			  			<div class="modal-dialog modal-xl" role="document">
+					<div class="modal fade" id="modalApart-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  			<div class="modal-dialog modal-lg" role="document">>
 			    			<div class="modal-content">
 			      				<div class="modal-header centralizar">
 			       					<h5 class="modal-title" id="exampleModalLabel">Detalhes do Imóvel</h5>
@@ -95,7 +80,16 @@
 			        				</button>
 			     				</div>
 				      			<div class="modal-body">
-				       			 aaaaaaaaaa aaaaaaaaaaa aaaaaaaa aaaaaaaaa aaaaaaaa aaaaaaa aaaaaaaaa aaaaaaaa aaaaaaaa aaaaaaaa aaaaaaaaa aaaaaaaa aaaaaaaa aaaaaaaaa aaaaaaa aaaaaaa
+				       			 
+				       			 <p> Toda a descrição do imóvel</p>
+
+       			 					<p align="center">  
+       			 						<img class="fotosmodal" src="imagens/apart4.jpg"> 
+       			 						<img class="fotosmodal" src="imagens/apart5.jpg"> 
+       			 						<img class="fotosmodal" src="imagens/apart6.jpg"> 
+       			 						<img class="fotosmodal" src="imagens/apart7.jpg"> 
+       			 					</p>
+
 				      			</div>
 				      			<ul class="navbar-button">
 				     	 		<div class="modal-footer">
@@ -118,25 +112,35 @@
 
 	<div style="padding: 1%" class="row descricao">
 	 	<div class="col-sm-4">
-	 		<h5 style="text-align: center;">Casa</h5>
+	 		<h4 class="centralizar" >Casa</h4>
 	 		<p> Informações essenciais do Imóvel, como preço, número de quartos e área construída, apresenadas de maneira legível e elegante </p>
 
 
-	 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">Detalhes
+
+	 		
+	 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCasa-lg">Detalhes
 			</button>
 
 			<!-- Modal -->
-			<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	  			<div class="modal-dialog" role="document">
+			<div class="modal fade" id="modalCasa-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  			<div class="modal-dialog modal-lg" role="document">
 	    			<div class="modal-content">
-	      				<div class="modal-header">
+	      				<div class="modal-header centralizar">
 	       					<h5 class="modal-title" id="exampleModalLabel">Detalhes do Imóvel</h5>
 	        				<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
 	          					<span aria-hidden="true">&times;</span>
 	        				</button>
 	     				</div>
 	      			<div class="modal-body">
-	       			 ...
+	       			 
+	      			<p> Toda a descrição do imóvel</p>
+
+       			 			<p align="center">  
+       			 				<img class="fotosmodal" src="imagens/casa4.jpg"> 
+       			 				<img class="fotosmodal" src="imagens/casa5.jpg"> 
+       			 				<img class="fotosmodal" src="imagens/casa6.jpg"> 
+       			 			</p>
+
 	      			</div>
 	     	 		<div class="modal-footer">
 	        			<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
@@ -158,24 +162,32 @@
 
 	<div style="padding: 1%" class="row descricao">
  	<div class="col-sm-4">
- 		<h5 style="text-align: center;">Sala Comercial</h5>
+ 		<h4 class="centralizar">Sala Comercial</h4>
  		<p> Informações essenciais do Imóvel, como preço, número de quartos e área construída, apresenadas de maneira legível e elegante </p>
 
- 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">Detalhes
+ 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSala-lg">Detalhes
 		</button>
 
 		<!-- Modal -->
-		<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  			<div class="modal-dialog" role="document">
+		<div class="modal fade" id="modalSala-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  			<div class="modal-dialog modal-lg" role="document">
     			<div class="modal-content">
-      				<div class="modal-header">
+      				<div class="modal-header centralizar">
        					<h5 class="modal-title" id="exampleModalLabel">Detalhes do Imóvel</h5>
         				<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           					<span aria-hidden="true">&times;</span>
         				</button>
      				</div>
       			<div class="modal-body">
-       			 ...
+       			 
+					<p> Toda a descrição do imóvel</p>
+
+      				<p align="center">  
+       			 				<img class="fotosmodal" src="imagens/sala4.jpg"> 
+       			 				<img class="fotosmodal" src="imagens/sala5.jpg"> 
+       			 				<img class="fotosmodal" src="imagens/sala6.jpg"> 
+       			 	</p>
+
       			</div>
      	 		<div class="modal-footer">
         			<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
@@ -201,24 +213,30 @@
 
 	<div style="padding: 1%" class="row descricao">
  	<div class="col-sm-4">
- 		<h5 style="text-align: center;">Terreno</h5>
+ 		<h4 class="centralizar">Terreno</h4>
  		<p> Informações essenciais do Imóvel, como preço, número de quartos e área construída, apresenadas de maneira legível e elegante </p>
 
- 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">Detalhes
+ 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalTerreno-lg">Detalhes
 		</button>
 
 		<!-- Modal -->
-		<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  			<div class="modal-dialog" role="document">
+		<div class="modal fade" id="modalTerreno-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  			<div class="modal-dialog modal-lg" role="document">
     			<div class="modal-content">
-      				<div class="modal-header">
+      				<div class="modal-header centralizar">
        					<h5 class="modal-title" id="exampleModalLabel">Detalhes do Imóvel</h5>
         				<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           					<span aria-hidden="true">&times;</span>
         				</button>
      				</div>
       			<div class="modal-body">
-       			 ...
+       			 
+      				<p> Toda a descrição do imóvel</p>
+
+      				<p align="center">  
+ 						<img class="fotos" src="imagens/terreno4.jpg">
+					</p>
+
       			</div>
      	 		<div class="modal-footer">
         			<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>

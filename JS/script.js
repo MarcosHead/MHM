@@ -1,13 +1,17 @@
 $(function () {
-  $("#Home").fadeIn(200);
+	$("#Home").fadeIn(200);
 });
 
-function openPage(idPagina, link)
+function mostraAba(idPagina, link)
 {
-  $(".tab").hide();      
-  $("ul.navbar-nav, li").removeClass("active");          
+	$(".aba").hide();      
+	$("ul.navbar-nav, li").removeClass("active");          
 
-  $("#" + idPagina).fadeIn(500);     
-  if (link != null)
-    link.parentNode.className += " active";
+	$("#" + idPagina).fadeIn(500);     
+	if (link != null)
+	link.parentNode.className += " active";
+}
+
+function mudarPagina(){
+	window.open("funcionarios.html", '_blank');
 }
