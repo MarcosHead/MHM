@@ -3,7 +3,12 @@ h4{
 }
 
 header{
-	padding-left: 5%;
+	width: 50%!important;
+	display: block;
+}
+
+nav{
+	margin-top: 0!important;
 }
 
 footer{
@@ -50,7 +55,6 @@ footer{
 
 .logofixa{
 	float: left;
-
 }
 
 .fotos{
@@ -73,6 +77,7 @@ footer{
 	margin: 2%;
 	border: 1px solid black;
 	border-radius: 10px;
+	display: none;
 }
 
 .modal-laranja{
