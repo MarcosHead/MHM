@@ -20,24 +20,21 @@ function mudarPagina(){
 	window.open("funcionarios.html", '_blank');
 }
 
-
 function sairPagina(){
 	if(confirm('Deseja sair da pagina?'))
 		window.close();
 }
 
 $(document).ready(function () {
-			
 		$(".fotos").each(function(i) {
 			$(this).delay(200*i).fadeIn();
 		});
 		
 		$(".fotos").hover(
-		
 			function (){
 				$(this).animate({
-					width: '220px',
-					height: '220px'
+					width: '215px',
+					height: '215px'
 				});
 			},
 			
@@ -45,8 +42,27 @@ $(document).ready(function () {
 				$(this).animate({
 					width: '200px',
 					height: '200px'
-			});
-		}			
-	);
-});
+				});
+			}			
+		);
 
+		$(".fotos2").each(function(i) {
+			$(this).delay(200*i).fadeIn();
+		});
+		
+		$(".fotos2").hover(
+			function (){
+				$(this).animate({
+					width: '400px',
+					height: '400px'
+				});
+			},
+			
+			function (){
+				$(this).animate({
+					width: '200px',
+					height: '200px'
+				});
+			}			
+		);
+});
