@@ -55,6 +55,12 @@ footer{
 	height: 200px;
 }
 
+.fotosmodal{
+	margin: 1% 2%;
+	width: 200px;
+	height: 200px;
+}
+
 .descricao{
 	margin: 2% 0;
 	border: 2px solid black;
