@@ -25,6 +25,10 @@ function sairPagina(){
 		window.close();
 }
 
+function mostrarDescricao(){
+	$(".descricao").fadeIn();
+}
+
 $(document).ready(function () {
 		$(".fotos").each(function(i) {
 			$(this).delay(200*i).fadeIn();
