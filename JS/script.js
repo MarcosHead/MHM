@@ -20,6 +20,12 @@ function mudarPagina(){
 	window.open("funcionarios.html", '_blank');
 }
 
+
+function sairPagina(){
+	if(confirm('Deseja sair da pagina?'))
+		window.close();
+}
+
 $(document).ready(function () {
 			
 		$(".fotos").each(function(i) {
