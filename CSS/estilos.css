@@ -11,6 +11,10 @@ footer{
 	padding: 1% 5%;
 }
 
+.titulo{
+	padding-top: 5px;
+}
+
 .centralizar{
 	text-align: center!important;
 }
@@ -53,17 +57,22 @@ footer{
 	margin: 1% 2%;
 	width: 200px;
 	height: 200px;
+	border: 0 solid black; 
+	border-radius: 10px;
 }
 
-.fotosmodal{
+.fotos2{
 	margin: 1% 2%;
 	width: 200px;
 	height: 200px;
+	border: 0 solid black; 
+	border-radius: 10px;
 }
 
 .descricao{
-	margin: 2% 0;
-	border: 2px solid black;
+	margin: 2%;
+	border: 1px solid black;
+	border-radius: 10px;
 }
 
 .modal-laranja{
