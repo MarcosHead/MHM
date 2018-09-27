@@ -1,3 +1,0 @@
-# MHM
-Projeto de PPI
-.
