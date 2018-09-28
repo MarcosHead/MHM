@@ -1,0 +1,738 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>MHM Imóveis</title>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" type="text/css" href="CSS/estilos.css">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	    <script src="JS/script.js"></script>
+	</head>
+
+	<body class="corpo">
+		
+		<div class="cabecalho">
+			<header class="container centralizar">
+				<div class="row">
+					<img class="col-md-3 logofixa img-fluid" src="imagens/logo.png">
+					<h2 class="col-md-6 titulo">MHM IMÓVEIS</h2>
+				</div>
+			</header>
+		</div>
+	
+		<nav class="navbar navbar-inverse menu">
+
+			<ul class="nav navbar-nav">
+				<li class="active"><a class="navLink" href="#" onclick="mostraAba('Home', this);">Home</a></li>
+				<li><a class="navLink" href="#" onclick="mostraAba('Busca', this);">Busca por Imóveis</a></li>
+			</ul>
+			<ul class="login">
+			<!-- Modal -->
+			<button style="color: white" class="btn botao-laranja"  data-toggle="modal" data-target="#modalLogin">Login</button>	
+			<div class="modal fade" id="modalLogin" role="dialog">
+	  			<div class="modal-dialog modal-xl" role="document">
+	    			<div class="modal-content">
+	      				<div class="modal-header modal-laranja">
+	      					<button type="button" class="close btn-danger" data-dismiss="modal" aria-label="Fechar">
+	          					<span aria-hidden="true">&times;</span>
+	        				</button>
+	       					<h4 class="modal-title centralizar">LOGIN</h4>
+	     				</div>
+		      			<div class="modal-body form-group  centralizar">
+		      				<label for="user">Usuário: </label>
+		      				<input class="form-control" type="text" name="user">
+		      				<br>
+		      				<label for="senha">Senha: </label>
+							<input class="form-control" type="password" name="senha">		      				
+		      			</div>
+		     	 		<div class="modal-footer centralizar">
+		     	 			<input type="submit" class="btn btn-success" value="Entrar" onclick="mudarPagina()">
+		        			<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+		     			</div>
+	   				</div>
+	  			</div>
+			</div>
+			</ul>
+
+		</nav>
+
+		<div class="aba container" id="Home">
+			<img class="logo" src="imagens/logo.png">
+			<h3 style="margin: 4%;">MHM IMÓVEIS</h3>
+			<p>Conteúdo da página home...</p>
+		</div>
+
+		<div class="aba container" id="Busca">
+			<h3>FILTROS DE PESQUISA</h3>
+			
+			<div class="row">
+      				<div class="col-md-2"> 
+
+
+      					<form>
+          					<div class="form-group">
+            				<label for="recipient-name" class="col-form-label">Propósito do usuário:</label>
+            				<select class="custom-select mb-3 form-control">
+  								<option selected>Escolha</option>
+  								<option value="1">Aquisição</option>
+  								<option value="2">Locação</option>
+							</select>
+
+          					</div>
+      				</div>
+
+      				<div class="col-md-2"> 
+          					<div class="form-group">
+            				<label for="recipient-name" class="col-form-label">Bairro:</label>
+            				<select class="custom-select mb-3 form-control">
+  								<option selected>Escolha</option>
+  								<option value="1">...</option>
+  								<option value="2">...</option>
+  								<option value="3">...</option>
+							</select>
+
+          					</div>
+      				</div>
+
+      				<div class="col-md-2"> 
+          						<div class="form-group">
+            						<label for="recipient-name" class="col-form-label">Valor mínimo:</label>
+            						<input type="text" name="Nome" class="form-control" id="recipient-name">
+          						</div>
+      				</div>
+
+      				<div class="col-md-2"> 
+          						<div class="form-group">
+            						<label for="recipient-name" class="col-form-label">Valor máximo:</label>
+            						<input type="text" name="Nome" class="form-control" id="recipient-name">
+          						</div>
+      				</div>
+
+      				<div class="col-md-2"> 
+          						<div class="form-group">
+            						<label for="recipient-name" class="col-form-label">Outras informações:</label>
+            						<input type="text" name="Nome" class="form-control" id="recipient-name">
+          						</div>
+      				</div>
+				
+					<div class="col-md-2">
+      							<div class="form-group">
+      								<br>
+									<label for="recipient-name" class="col-form-label"></label>
+      								<button onclick="mostrarDescricao()" type="button" class="btn btn-primary botao-laranja" data-toggle="modal" data-target="#modalBuscar">Buscar
+									</button>
+								</div>
+      					</form>
+      				</div>
+
+				</div>
+
+			<br>
+			<h3>RESULTADOS DA PESQUISA:</h3>
+			<div style="padding: 1%" class="row descricao">
+			 	<div class="col-sm-4">
+			 		<h4 class="centralizar" >Apartamento</h4>
+			 		<p>  Informações essenciais do Imóvel, como preço, número de quartos e área construída, apresenadas de maneira legível e elegante </p>
+
+			 		<button type="button" class="btn btn-primary botao-azul" data-toggle="modal" data-target="#modalApart-lg">Detalhes
+			 		</button>
+
+					<!-- Modal -->
+					<div class="modal fade" id="modalApart-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  			<div class="modal-dialog modal-lg" role="document">
+			    			<div class="modal-content">
+			      				<div class="modal-header modal-laranja centralizar">
+			       					<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+			          					<span aria-hidden="true">&times;</span>
+			        				</button>
+			       					<h4 class="modal-title" id="exampleModalLabel">Detalhes do Imóvel</h4>
+			     				</div>
+				      			<div class="modal-body">
+				       			 
+				       			 <p> Toda a descrição do imóvel</p>
+
+       			 					<p align="center">  
+       			 						<img class="fotos2 img-fluid" src="imagens/apart4.jpg"> <br>
+       			 						<img class="fotos2" src="imagens/apart5.jpg"> <br>
+       			 						<img class="fotos2" src="imagens/apart6.jpg"> 
+       			 					</p>
+
+				      			</div>
+				      			<ul class="navbar-button">
+				     	 		<div class="modal-footer">
+				        			<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>	
+				     			</div>
+				     			</ul>
+			   				</div>
+			  			</div>
+					</div>
+
+
+					<button type="button" class="btn btn-primary botao-laranja" data-toggle="modal" data-target="#modalInteresse">Tenho interesse
+					</button>
+
+
+					<div class="modal fade" id="modalInteresse" tabindex="-1" role="dialog" aria-labelledby="exampleModalInteresse" aria-hidden="true">
+			  			<div class="modal-dialog" role="document">
+			    			<div class="modal-content">
+			      				<div class="modal-header centralizar modal-laranja">
+			        				<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+			          					<span  aria-hidden="true">&times;</span>
+			        				</button>
+			        				<h4 class="modal-title" id="exampleModalInteresse">Fale Conosco</h4>
+								</div>
+				      			<div class="modal-body">
+
+				      				
+    									<div class="row">
+      										<div class="col-md-12"> 
+      											<form>
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">Nome:</label>
+            										<input type="text" name="Nome" class="form-control" id="recipient-name">
+          											</div>
+          										</form>
+
+      										</div>
+      										
+    									</div>
+
+    									<div class="row">
+      										<div class="col-md-6"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">E-mail:</label>
+            										<input type="text" name="E-mail" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+
+      										
+
+      										<div class="col-md-2"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">DDD:</label>
+            										<input type="text" name="DDD" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+
+      										
+      										<div class="col-md-4"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">Telefone:</label>
+            										<input type="text" name="Telefone" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+      										
+      										
+      									
+    									</div>
+
+
+    								
+
+				      				<form>
+          								
+          								<div class="form-group">
+            								<label for="message-text" class="col-form-label">Descrição da proposta:</label>
+            								<textarea class="form-control" id="message-text"></textarea>
+          								</div>
+        							</form>
+
+				      			</div>
+
+				      			<div class="modal-footer">
+        							<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        							<button type="button" class="btn btn-primary botao-laranja">Enviar</button>
+      							</div>
+			   				</div>
+			  			</div>
+					</div>
+
+
+
+
+
+
+				</div>
+
+		
+				<div class="col-sm-8">
+			 		<p align="center">  
+			 			<img class="fotos" src="imagens/apart.jpg">
+			 			<img class="fotos" src="imagens/apart2.jpg">
+			 			<img class="fotos" src="imagens/apart3.jpg"> 
+			 		</p>
+				</div>
+			</div>
+
+	<div style="padding: 1%" class="row descricao">
+	 	<div class="col-sm-4">
+	 		<h4 class="centralizar" >Casa</h4>
+	 		<p> Informações essenciais do Imóvel, como preço, número de quartos e área construída, apresenadas de maneira legível e elegante </p>
+
+
+	 		<button type="button" class="btn btn-primary botao-azul" data-toggle="modal" data-target="#modalCasa-lg">Detalhes
+			</button>
+
+			<!-- Modal -->
+			<div class="modal fade" id="modalCasa-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  			<div class="modal-dialog modal-lg" role="document">
+	    			<div class="modal-content">
+	      				<div class="modal-header modal-laranja centralizar">
+	       					<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+	          					<span aria-hidden="true">&times;</span>
+	        				</button>
+	       					<h4 class="modal-title" id="exampleModalLabel">Detalhes do Imóvel</h4>
+	     				</div>
+	      			<div class="modal-body">
+	       			 
+	      			<p> Toda a descrição do imóvel</p>
+
+       			 			<p align="center">  
+       			 				<img class="fotos2" src="imagens/casa4.jpg"> <br>
+       			 				<img class="fotos2" src="imagens/casa5.jpg"> <br>
+       			 				<img class="fotos2" src="imagens/casa6.jpg"> 
+       			 			</p>
+
+	      			</div>
+	     	 		<div class="modal-footer">
+	        			<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+	        			
+	     			</div>
+	   				</div>
+	  			</div>
+			</div>
+
+			<button type="button" class="btn btn-primary botao-laranja" data-toggle="modal" data-target="#modalInteresse">Tenho interesse
+					</button>
+
+
+					<div class="modal fade" id="modalInteresse" tabindex="-1" role="dialog" aria-labelledby="exampleModalInteresse" aria-hidden="true">
+			  			<div class="modal-dialog" role="document">
+			    			<div class="modal-content">
+			      				<div class="modal-header centralizar modal-laranja">
+			       					
+			        				<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+			          					<span  aria-hidden="true">&times;</span>
+			        				</button>
+			        				<h4 class="modal-title" id="exampleModalInteresse">Fale Conosco</h4>
+
+			     				</div>
+				      			<div class="modal-body">
+
+				      				
+    									<div class="row">
+      										<div class="col-md-12"> 
+
+
+      											<form>
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">Nome:</label>
+            										<input type="text" name="Nome" class="form-control" id="recipient-name">
+          											</div>
+          										</form>
+
+      										</div>
+      										
+    									</div>
+
+    									<div class="row">
+      										<div class="col-md-6"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">E-mail:</label>
+            										<input type="text" name="E-mail" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+
+      										
+
+      										<div class="col-md-2"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">DDD:</label>
+            										<input type="text" name="DDD" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+
+      										
+      										<div class="col-md-4"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">Telefone:</label>
+            										<input type="text" name="Telefone" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+      										
+      										
+      									
+    									</div>
+
+
+    								
+
+				      				<form>
+          								
+          								<div class="form-group">
+            								<label for="message-text" class="col-form-label">Descrição da proposta:</label>
+            								<textarea class="form-control" id="message-text"></textarea>
+          								</div>
+        							</form>
+
+				      			</div>
+
+				      			<div class="modal-footer">
+        							<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        							<button type="button" class="btn btn-primary botao-laranja">Enviar</button>
+      							</div>
+			   				</div>
+			  			</div>
+					</div>
+
+
+		</div>
+		<div class="col-sm-8">
+	 		<p align="center">
+	 			<img class="fotos" src="imagens/casa.jpg">
+	 			<img class="fotos" src="imagens/casa2.jpg">
+	 			<img class="fotos" src="imagens/casa3.jpg">
+	 		</p>
+		</div>
+
+
+
+
+
+	</div>
+
+	<div style="padding: 1%" class="row descricao">
+ 	<div class="col-sm-4">
+ 		<h4 class="centralizar">Sala Comercial</h4>
+ 		<p> Informações essenciais do Imóvel, como preço, número de quartos e área construída, apresenadas de maneira legível e elegante </p>
+
+ 		<button type="button" class="btn btn-primary botao-azul" data-toggle="modal" data-target="#modalSala-lg">Detalhes
+		</button>
+
+		<!-- Modal -->
+		<div class="modal fade" id="modalSala-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  			<div class="modal-dialog modal-lg" role="document">
+    			<div class="modal-content">
+      				<div class="modal-header modal-laranja centralizar">
+       					<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          					<span aria-hidden="true">&times;</span>
+        				</button>
+        				<h4 class="modal-title" id="exampleModalLabel">Detalhes do Imóvel</h4>
+     				</div>
+      			<div class="modal-body">
+       			 
+					<p> Toda a descrição do imóvel</p>
+
+      				<p align="center">  
+       			 				<img class="fotos2" src="imagens/sala4.jpg"> <br>
+       			 				<img class="fotos2" src="imagens/sala5.jpg"> <br>
+       			 				<img class="fotos2" src="imagens/sala6.jpg"> 
+       			 	</p>
+
+      			</div>
+     	 		<div class="modal-footer">
+        			<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        			
+     			</div>
+   				</div>
+  			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary botao-laranja" data-toggle="modal" data-target="#modalInteresse">Tenho interesse
+					</button>
+
+
+					<div class="modal fade" id="modalInteresse" tabindex="-1" role="dialog" aria-labelledby="exampleModalInteresse" aria-hidden="true">
+			  			<div class="modal-dialog" role="document">
+			    			<div class="modal-content">
+			      				<div class="modal-header modal-laranja centralizar">
+			       					<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+			          					<span  aria-hidden="true">&times;</span>
+			        				</button>
+			        				<h4 class="modal-title" id="exampleModalInteresse">Fale Conosco</h4>
+								</div>
+				      			<div class="modal-body">
+
+				      				
+    									<div class="row">
+      										<div class="col-md-12"> 
+
+
+      											<form>
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">Nome:</label>
+            										<input type="text" name="Nome" class="form-control" id="recipient-name">
+          											</div>
+          										</form>
+
+      										</div>
+      										
+    									</div>
+
+    									<div class="row">
+      										<div class="col-md-6"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">E-mail:</label>
+            										<input type="text" name="E-mail" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+
+      										
+
+      										<div class="col-md-2"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">DDD:</label>
+            										<input type="text" name="DDD" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+
+      										
+      										<div class="col-md-4"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">Telefone:</label>
+            										<input type="text" name="Telefone" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+      										
+      										
+      									
+    									</div>
+
+
+    								
+
+				      				<form>
+          								
+          								<div class="form-group">
+            								<label for="message-text" class="col-form-label">Descrição da proposta:</label>
+            								<textarea class="form-control" id="message-text"></textarea>
+          								</div>
+        							</form>
+
+				      			</div>
+
+				      			<div class="modal-footer">
+        							<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        							<button " type="button" class="btn btn-primary botao-laranja">Enviar</button>
+      							</div>
+			   				</div>
+			  			</div>
+					</div>
+
+
+
+	</div>
+	
+	<div class="col-sm-8">
+ 		<p align="center">  
+ 			<img class="fotos" src="imagens/sala.jpg">  
+ 			<img class="fotos" src="imagens/sala3.jpg">
+			<img class="fotos" src="imagens/sala2.jpg">
+		</p>
+	</div>
+
+	</div>
+
+	<div style="padding: 1%" class="row descricao">
+ 	<div class="col-sm-4">
+ 		<h4 class="centralizar">Terreno</h4>
+ 		<p> Informações essenciais do Imóvel, como preço, número de quartos e área construída, apresenadas de maneira legível e elegante </p>
+
+ 		<button type="button" class="btn btn-primary botao-azul" data-toggle="modal" data-target="#modalTerreno-lg">Detalhes
+		</button>
+
+		<!-- Modal -->
+		<div class="modal fade" id="modalTerreno-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  			<div class="modal-dialog modal-lg" role="document">
+    			<div class="modal-content">
+      				<div class="modal-header modal-laranja centralizar">
+       					<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          					<span aria-hidden="true">&times;</span>
+        				</button>
+     					<h4 class="modal-title" id="exampleModalLabel">Detalhes do Imóvel</h4>
+        			</div>
+      			<div class="modal-body">
+       			 
+      				<p> Toda a descrição do imóvel</p>
+
+      				<p align="center">  
+ 						<img class="fotos2" src="imagens/terreno4.jpg">
+					</p>
+
+      			</div>
+     	 		<div class="modal-footer">
+        			<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        			
+     			</div>
+   				</div>
+  			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary botao-laranja" data-toggle="modal" data-target="#modalInteresse">Tenho interesse
+					</button>
+
+
+					<div class="modal fade" id="modalInteresse" tabindex="-1" role="dialog" aria-labelledby="exampleModalInteresse" aria-hidden="true">
+			  			<div class="modal-dialog" role="document">
+			    			<div class="modal-content">
+			      				<div  class="modal-header centralizar modal-laranja">
+			        				<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+			          					<span  aria-hidden="true">&times;</span>
+			        				</button>
+			        				<h4 class="modal-title" id="exampleModalInteresse">Fale Conosco</h4>
+			     				</div>
+				      			<div class="modal-body">
+
+				      				
+    									<div class="row">
+      										<div class="col-md-12"> 
+
+
+      											<form>
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">Nome:</label>
+            										<input type="text" name="Nome" class="form-control" id="recipient-name">
+          											</div>
+          										</form>
+
+      										</div>
+      										
+    									</div>
+
+    									<div class="row">
+      										<div class="col-md-6"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">E-mail:</label>
+            										<input type="text" name="E-mail" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+
+      										
+
+      										<div class="col-md-2"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">DDD:</label>
+            										<input type="text" name="DDD" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+
+      										
+      										<div class="col-md-4"> 
+
+
+      											
+          											<div class="form-group">
+            										<label for="recipient-name" class="col-form-label">Telefone:</label>
+            										<input type="text" name="Telefone" class="form-control" id="recipient-name">
+          											</div>
+          										
+
+      										</div>
+      										
+      										
+      									
+    									</div>
+
+
+    								
+
+				      				<form>
+          								
+          								<div class="form-group">
+            								<label for="message-text" class="col-form-label">Descrição da proposta:</label>
+            								<textarea class="form-control" id="message-text"></textarea>
+          								</div>
+        							</form>
+
+				      			</div>
+
+				      			<div class="modal-footer">
+        							<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        							<button type="button" class="btn btn-primary botao-laranja">Enviar</button>
+      							</div>
+			   				</div>
+			  			</div>
+					</div>
+
+
+	</div>
+	
+	
+		<div class="col-sm-8">
+	 		<p align="center">  
+	 			<img class="fotos" src="imagens/terreno.jpg">
+	 			<img class="fotos" src="imagens/terreno2.jpg">
+				<img class="fotos" src="imagens/terreno3.jpg">
+			</p>
+		</div>
+
+	</div>
+
+		</div>
+
+		<footer class="centralizar">
+			<p><b>Copyright © 2018  LTDA. Todos os direitos reservados. Imobiliária</b></p>
+			<p><b>CNPJ:</b> 12.345.678/9000-00.  Endereço: Avenida Rua, 0.  Bairro: Lagoa Seca.  CEP: 38400-000 .</p>
+			<p><b>E-mail:</b> mhm@mhm.com. Telefone: (34) 3200-0000.</p>
+		</footer>	
+	</body>
+</html>
