@@ -88,8 +88,8 @@ footer{
 }
 
 .modal-laranja{
-	background: rgb(219,107,68); height: 55px!important;
-
+	background: rgb(219,107,68); 
+	height: 55px!important;
 }
 
 .botao-laranja{
@@ -100,6 +100,6 @@ footer{
 	background: rgb(0,78,120)!important;
 }
 
-.botao-cadastro{
+.botao{
 	margin: 10px 0; 
 }
