@@ -15,6 +15,11 @@ footer{
 	padding: 1% 5%;
 }
 
+.bem-vindo{
+	margin: 2% 15%;
+	width: 70%!important;
+}
+
 .cabecalho{
 	background-color: rgb(219,107,68)!important;
 }
@@ -54,9 +59,9 @@ footer{
 }
 
 .logo{
-	float: left;
-	height: 150px;
-	width: 150px;
+	margin: 5% 10%;
+	width: 80%;
+	height: auto;
 }
 
 .logofixa{
