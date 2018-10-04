@@ -70,3 +70,24 @@ $(document).ready(function () {
 			}			
 		);
 });
+
+
+function testeTipo(){
+	var valor = document.forms["cadImoveis"]["tipo"].value;
+	if(valor=="C")
+	 	$("#Apartamento").fadeOut();
+	else
+		$("#Apartamento").fadeIn();
+}
+
+function testeTipoTabela(obj){
+	var v = obj.value;
+	if(v=="C"){
+		$("#tabelaCasa").fadeIn(0);
+	 	$("#tabelaApartamento").fadeOut(0);
+	}
+	else{
+		$("#tabelaCasa").fadeOut(0);
+		$("#tabelaApartamento").fadeIn(0);
+	}
+}
