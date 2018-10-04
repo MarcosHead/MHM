@@ -15,19 +15,44 @@ footer{
 	padding: 1% 5%;
 }
 
+li .active{
+	padding-right: 0!important; 
+}
+
+#Apartamento{
+	display: none;
+}
+
+#tabelaApartamento{
+	display: none;
+}
+
+.aba {
+	padding: 2%;
+	display: none;
+	border: 0.5px solid lightgray;
+	margin: 0 0 2%;
+}
+
 .bem-vindo{
 	margin: 2% 15%;
 	width: 70%!important;
 }
 
-.cabecalho{
-	background-color: rgb(219,107,68)!important;
+.botao{
+	margin: 10px 0; 
 }
 
-.titulo{
-	font-family: 'Lucida Calligraphy';
-	font-weight: bolder;
-	margin-top: 10%!important;
+.botao-azul{
+	background: rgb(0,78,120)!important;
+}
+
+.botao-laranja{
+	background: rgb(219,107,68)!important;
+}
+
+.cabecalho{
+	background-color: rgb(219,107,68)!important;
 }
 
 .centralizar{
@@ -39,34 +64,11 @@ footer{
 	width: 70% auto;
 }
 
-.menu{
-	vertical-align: middle;
-	margin-top: 100px; 
-}
-
-.aba {
-	padding: 2%;
+.descricao{
+	margin: 2%;
+	border: 1px solid black;
+	border-radius: 10px;
 	display: none;
-	border: 0.5px solid lightgray;
-	margin: 0 0 2%;
-}
-
-.login{
-	float: right!important; 
-	margin-top: 7px;
-	margin-right: 5px;
-	color: white;
-}
-
-.logo{
-	margin: 5% 10%;
-	width: 80%;
-	height: auto;
-}
-
-.logofixa{
-	float: left;
-	margin-left: 10%!important;
 }
 
 .fotos{
@@ -85,11 +87,26 @@ footer{
 	border-radius: 10px;
 }
 
-.descricao{
-	margin: 2%;
-	border: 1px solid black;
-	border-radius: 10px;
-	display: none;
+.login{
+	float: right!important; 
+	margin-top: 7px;
+	margin-right: 5px;
+	color: white;
+}
+
+.logo{
+	margin: 5% 10%;
+	width: 80%;
+	height: auto;
+}
+
+.logofixa{
+	float: left;
+}
+
+.menu{
+	vertical-align: middle;
+	margin-top: 100px; 
 }
 
 .modal-laranja{
@@ -97,14 +114,8 @@ footer{
 	height: 55px!important;
 }
 
-.botao-laranja{
-	background: rgb(219,107,68)!important;
-}
-
-.botao-azul{
-	background: rgb(0,78,120)!important;
-}
-
-.botao{
-	margin: 10px 0; 
+.titulo{
+	font-family: 'Lucida Calligraphy';
+	font-weight: bolder;
+	margin-top: 10%!important;
 }
