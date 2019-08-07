@@ -23,15 +23,23 @@ li .active{
 	display: none;
 }
 
+#menu{
+	float: left;
+}
+
+#resultadoCadastro{
+	padding-bottom: 3%;
+}
+
 #tabelaApartamento{
 	display: none;
 }
 
 .aba {
 	padding: 2%;
-	display: none;
 	border: 0.5px solid lightgray;
 	margin: 0 0 2%;
+	display: none;
 }
 
 .bem-vindo{
@@ -45,6 +53,10 @@ li .active{
 
 .botao-azul{
 	background: rgb(0,78,120)!important;
+}
+
+.botao-busca{
+	margin-top: 35%;
 }
 
 .botao-laranja{
@@ -65,10 +77,10 @@ li .active{
 }
 
 .descricao{
-	margin: 2%;
+	margin: 2% 1%!important;
 	border: 1px solid black;
 	border-radius: 10px;
-	display: none;
+	padding: 1%;
 }
 
 .fotos{
@@ -117,5 +129,22 @@ li .active{
 .titulo{
 	font-family: 'Lucida Calligraphy';
 	font-weight: bolder;
-	margin-top: 10%!important;
+	margin: 10% 0!important;
+}
+
+@media (max-width: 768px){
+	.logofixa{
+		float:none;
+	}
+	#menu{
+		margin-top: 60px;
+		width: 100%!important;
+		float: none;
+	}
+}
+
+@media (max-width: 1200px){
+	.botao-busca{
+		margin-top: 0;
+	}
 }
